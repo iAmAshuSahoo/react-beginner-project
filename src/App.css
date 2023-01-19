@@ -1,0 +1,35 @@
+#root {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* .card {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.imageAttr {
+  height: 250px;
+  width: 450px;
+}
+
+.btnAttr {
+  height: 3em;
+}
+
+.home {
+  text-align: left;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.3em;
+}
