@@ -8,7 +8,7 @@ function MainPage() {
       id: "Proj1",
       name: "Photo Carousal app",
       path: "carousal",
-      img: "/src/assets/carousal.PNG",
+      img: "assets/carousal.PNG",
     },
   ];
   const listOfCards = projects.map((project) => (
