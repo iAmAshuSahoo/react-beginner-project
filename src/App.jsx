@@ -10,12 +10,12 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/react-beginner-project",
     element: <MainPage />,
     errorElement: <ErrorPage />
   },
   {
-    path: "carousal",
+    path: "/react-beginner-project/carousal",
     element: <Carousal />,
   },
 ]);
