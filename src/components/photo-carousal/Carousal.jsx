@@ -31,7 +31,7 @@ function Carousal() {
   return (
     <div className="App">
       <Link to={"/react-beginner-project/"}><p className="home">Go to Home</p></Link>
-      <h1>Project 1: Carousal</h1>
+      <h1 className="sub-head">Project 1: Carousal</h1>
       <div className="carousal-card">
         <button className="btnAttr" onClick={changeImage}>
           Back

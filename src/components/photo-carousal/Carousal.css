@@ -26,3 +26,37 @@
 .btnAttr {
   height: 3em;
 }
+
+@media (max-width: 500px) {
+  .home {
+    font-size: 0.7em;
+  }
+  .carousal-card {
+    padding: 0;
+    max-width: 100%;
+  }
+  #root {
+    padding: 0.5rem;
+  }
+  .btnAttr {
+    font-size: 0.5em;
+  }
+  .imageAttr {
+    height: 100px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .carousal-card {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .imageAttr {
+    height: 150px;
+    width: 250px;
+  }
+}

@@ -24,8 +24,8 @@ function MainPage() {
   ));
   return (
     <>
-      <h1>React Projects for Beginners in 2023</h1>
-      <h2>Explore the 7 projects for enhancing your learning</h2>
+      <h1 className="main-head">React Projects for Beginners in 2023</h1>
+      <h2 className="sub-head">Explore the 7 projects for enhancing your learning</h2>
       <div className="card-list">
         {listOfCards}
       </div>
