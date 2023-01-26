@@ -1,5 +1,10 @@
 .card-list {
   margin-top: 3em;
+  display: flex;
+}
+
+.card-arrange {
+  display: flex;
 }
 
 @media (max-width: 500px) {

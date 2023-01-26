@@ -1,6 +1,7 @@
 import './App.css';
 import MainPage from '../src/components/main-page/MainPage';
-import Carousal from './components/photo-carousal/Carousal'
+import Carousal from './components/apps/photo-carousalApp/Carousal'
+import Faq from './components/apps/faqApp/Faq'
 import ErrorPage from './components/error-page'
 import {
   createBrowserRouter,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/react-beginner-project/carousal",
     element: <Carousal />,
+  },
+  {
+    path: "/react-beginner-project/faq",
+    element: <Faq />,
   },
 ]);
 

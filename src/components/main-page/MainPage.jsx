@@ -10,11 +10,16 @@ function MainPage() {
       path: "carousal",
       img: "assets/img/carousal.PNG",
     },
+    {
+      id: "Proj2",
+      name: "FAQ app",
+      path: "faq",
+      img: "assets/img/carousal.PNG",
+    },
   ];
   const listOfCards = projects.map((project) => (
     <Fragment key={project.id}>
       <Card
-        id={project.id}
         name={project.name}
         location={project.path}
         img={project.img}
