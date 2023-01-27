@@ -6,7 +6,9 @@ According to Andrew Huberman, neuroscientist, Stanford University
 
 > Best way to learn a skill is by making **Errors**
 
-The beginner project is based on following freeCodeCamp [link](https://www.freecodecamp.org/news/react-projects-for-beginners-easy-ideas-with-code/)
+The beginner project is based on available [freeCodeCamp link](https://www.freecodecamp.org/news/react-projects-for-beginners-easy-ideas-with-code/)
+
+You can open the application at [hoisted link](https://iamashusahoo.github.io/react-beginner-project/)
 
 ## Technologies used so far:
 
