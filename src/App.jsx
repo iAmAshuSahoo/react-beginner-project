@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <Faq />,
   },
 ], {
-  basename: process.env.PUBLIC_URL
+  basename: import.meta.env.BASE_URL
 });
 
 function App() {
