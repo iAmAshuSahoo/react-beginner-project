@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import { questions } from './faqQuestions';
 import { Link } from "react-router-dom";
-import "./Faq.css";
+// import "./Faq.css";
 
 export default function Faq() {
     const [toggleFaq, setToggleFaq] = useState(Array(questions.length).fill(false, 0));
