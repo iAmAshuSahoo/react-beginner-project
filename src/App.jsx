@@ -12,16 +12,16 @@ import {
 
 const router = createHashRouter([
   {
-    path: "/react-beginner-project",
+    path: "/",
     element: <MainPage />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/react-beginner-project/carousal",
+    path: "/carousal",
     element: <Carousal />,
   },
   {
-    path: "/react-beginner-project/faq",
+    path: "/faq",
     element: <Faq />,
   },
 ], {

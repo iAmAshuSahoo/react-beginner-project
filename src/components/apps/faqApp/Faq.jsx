@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import { questions } from './faqQuestions';
-// import "./Faq.css";
+import { Link } from "react-router-dom";
+import "./Faq.css";
 
 export default function Faq() {
     const [toggleFaq, setToggleFaq] = useState(Array(questions.length).fill(false, 0));
@@ -37,7 +38,8 @@ export default function Faq() {
     })
     return (
         <div>
-            <h1>Project 2: FAQ/Accordian</h1>
+            <Link to={"/"}><p className="home">Go to Home</p></Link>
+            <h1 className='sub-head'>Project 2: FAQ/Accordian</h1>
             <div id="faq-style">
                 <h2>FAQ</h2>
                 <button className='open-faq' onClick={handleOpenFaq}>{openOneFaq ? "Open all FAQ" : "Open ONLY one Faq"}</button>
