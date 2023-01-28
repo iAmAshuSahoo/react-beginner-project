@@ -7,13 +7,13 @@ function MainPage() {
     {
       id: "Proj1",
       name: "Photo Carousal app",
-      path: "carousal",
+      path: "carousal/",
       img: "assets/img/carousal.PNG",
     },
     {
       id: "Proj2",
       name: "FAQ app",
-      path: "faq",
+      path: "faq/",
       img: "assets/img/carousal.PNG",
     },
   ];
