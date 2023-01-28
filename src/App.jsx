@@ -4,12 +4,13 @@ import Carousal from './components/apps/photo-carousalApp/Carousal'
 import Faq from './components/apps/faqApp/Faq'
 import ErrorPage from './components/error-page'
 import {
-  createBrowserRouter,
+  createHashRouter,
+  // createBrowserRouter,   // remove createHashRouter in the FUTURE added this for using it in ghPages
   RouterProvider,
 } from "react-router-dom";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/react-beginner-project",
     element: <MainPage />,
