@@ -23,7 +23,9 @@ const router = createBrowserRouter([
     path: "/react-beginner-project/faq",
     element: <Faq />,
   },
-]);
+], {
+  basename: process.env.PUBLIC_URL
+});
 
 function App() {
   return <RouterProvider router={router} />
