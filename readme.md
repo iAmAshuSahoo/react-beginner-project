@@ -17,3 +17,16 @@ You can open the application at [hoisted link](https://iamashusahoo.github.io/re
 3. JavaScript
 4. ReactJs 18
 5. React Router
+
+## React Beginners Project
+
+1. [Photo-Carousal app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/photo-carousalApp)
+2. [FAQ/Accordian app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/faqApp)
+
+## Hoisted Site
+
+https://iamashusahoo.github.io/react-beginner-project/
+
+## Caution
+
+Due to the availability of an active backend we are unable to route our deployed apps directly. For that we are using a hack HasRouter which is not recommended by react-router
