@@ -20,6 +20,8 @@ Open the application at [link](https://iamashusahoo.github.io/react-beginner-pro
 3. Toggle state with useState
 4. Conditional
 5. display multiple component with .map
+6. Created multiple components
+7. lifting state up.
 
 ## Hoisted Site
 

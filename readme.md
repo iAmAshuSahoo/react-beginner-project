@@ -15,8 +15,8 @@ You can open the application at [hoisted link](https://iamashusahoo.github.io/re
 1. HTML
 2. CSS
 3. JavaScript
-4. ReactJs 18
-5. React Router
+4. ReactJs 18.2
+5. React Router 6.7.0
 
 ## React Beginners Project
 
@@ -29,4 +29,6 @@ https://iamashusahoo.github.io/react-beginner-project/
 
 ## Caution
 
-Due to the availability of an active backend we are unable to route our deployed apps directly. For that we are using a hack HasRouter which is not recommended by react-router
+Due to the availability of an active backend we are unable to route our deployed apps directly. For that we are using a hack HasRouter which is not recommended by react-router.
+
+We will be adding backend in future release.
