@@ -14,7 +14,7 @@ function MainPage() {
       id: "Proj2",
       name: "FAQ app",
       path: "faq/",
-      img: "assets/img/carousal.PNG",
+      img: "assets/img/faq.PNG",
     },
   ];
   const listOfCards = projects.map((project) => (
