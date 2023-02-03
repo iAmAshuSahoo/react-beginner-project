@@ -8,7 +8,7 @@ function Card({ name, img, location }) {
         <img src={img} alt="Avatar" className="project-image" />
         <div className="container">
           <h4>
-            <b>{name}</b>
+            {name}
           </h4>
         </div>
       </div>

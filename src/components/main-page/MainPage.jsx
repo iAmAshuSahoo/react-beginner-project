@@ -6,7 +6,7 @@ function MainPage() {
   const projects = [
     {
       id: "Proj1",
-      name: "Photo Carousal app",
+      name: "Carousal app",
       path: "carousal/",
       img: "assets/img/carousal.PNG",
     },

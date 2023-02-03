@@ -1,13 +1,17 @@
 .card-list {
-  margin-top: 3em;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }
 
 .card-arrange {
   display: flex;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 660px) {
+  .card-list {
+    justify-content: center;
+  }
   .main-head {
     font-size: 2.2em;
   }
