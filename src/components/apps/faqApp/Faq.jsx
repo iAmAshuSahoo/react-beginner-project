@@ -1,11 +1,25 @@
 import { Fragment, useState } from 'react';
 import { questions } from './faqQuestions';
 import { Link } from "react-router-dom";
-// import "./Faq.css";
+import ShowQuestion from './ShowQuestion';
+import "./Faq.css";
 
 export default function Faq() {
-    const [toggleFaq, setToggleFaq] = useState(Array(questions.length).fill(false, 0));
     const [openOneFaq, setOpenOneFaq] = useState(true);
+    const [toggleFaq, setToggleFaq] = useState(Array(questions.length).fill(false));
+
+    const showAllQuestions = questions.map((ques, ind) => {
+        return (
+            <Fragment key={ques.id}>
+                <ShowQuestion
+                    questionInfo={ques}
+                    selectedQues={ind}
+                    showAns={toggleFaq[ind]}
+                    handleFaq={handleFaq}
+                />
+            </Fragment>
+        );
+    });
 
     function handleFaq(e, index) {
         const updateFaq = toggleFaq.map((faq, ind) => {
@@ -25,17 +39,10 @@ export default function Faq() {
 
     function handleOpenFaq() {
         setOpenOneFaq(openOneFaq => !openOneFaq);
-        handleFaq();
+        const updateFaq = Array(questions.length).fill(false);
+        setToggleFaq(updateFaq);
     }
 
-    const showAllQuestions = questions.map((ques, ind) => {
-        return (<div className='faq-ques' key={ques.id}>
-            <button className={`accordion ${toggleFaq[ind] ? "active" : ""}`} onClick={(e) => handleFaq(e, ind)}>{ques.title}</button>
-            <div className={`panel ${toggleFaq[ind] ? "" : "addHeight"}`}>
-                <p>{ques.info}.</p>
-            </div>
-        </div>);
-    })
     return (
         <div>
             <Link to={"/"}><p className="home">Go to Home</p></Link>
