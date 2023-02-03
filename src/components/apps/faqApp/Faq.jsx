@@ -23,7 +23,7 @@ export default function Faq() {
 
     function handleFaq(e, index) {
         const updateFaq = toggleFaq.map((faq, ind) => {
-            if (openOneFaq) {
+            if (handleShowOneFaqLogic(index)) {
                 faq = false;
             }
 
@@ -35,6 +35,10 @@ export default function Faq() {
             return faq;
         })
         setToggleFaq(updateFaq);
+    }
+
+    function handleShowOneFaqLogic(index) {
+        return openOneFaq && !toggleFaq[index]
     }
 
     function handleOpenFaq() {
