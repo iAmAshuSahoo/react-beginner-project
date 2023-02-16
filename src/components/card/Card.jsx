@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 function Card({ name, img, location }) {
   return (
     <Link to={location}>
-      <div className="card">
+      <div className="card-project">
         <img src={img} alt="Avatar" className="project-image" />
         <div className="container">
           <h4>

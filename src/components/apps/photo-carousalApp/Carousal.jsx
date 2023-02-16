@@ -29,9 +29,9 @@ function Carousal() {
     }
   }
   return (
-    <div className="App">
+    <div className="initialRoot">
       <Link to={"/"}><p className="home">Go to Home</p></Link>
-      <h1 className="sub-head">Project 1: Carousal</h1>
+      <h1 className="main-head">Project 1: Carousal</h1>
       <div className="carousal-card">
         <button className="btnAttr" onClick={changeImage}>
           Back
