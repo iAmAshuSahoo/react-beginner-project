@@ -3,38 +3,61 @@ import Card from "../card/Card";
 import "./MainPage.css"
 
 function MainPage() {
-  const projects = [
+  const allProjects = [
     {
-      id: "Proj1",
-      name: "Carousal app",
-      path: "carousal/",
-      img: "assets/img/carousal.PNG",
+      type: "Beginner",
+      projects:
+        [
+          {
+            id: "Proj1",
+            name: "Carousal app",
+            path: "carousal/",
+            img: "assets/img/carousal.PNG",
+          },
+          {
+            id: "Proj2",
+            type: "Beginner",
+            name: "FAQ app",
+            path: "faq/",
+            img: "assets/img/faq.PNG",
+          },
+        ],
     },
     {
-      id: "Proj2",
-      name: "FAQ app",
-      path: "faq/",
-      img: "assets/img/faq.PNG",
-    },
+      type: "Intermediate",
+      projects:
+        [
+          {
+            id: "Proj1",
+            type: "Intermediate",
+            name: "Football Match app",
+            path: "footballMatch/",
+            img: "assets/img/carousal.PNG",
+          },
+        ]
+    }
   ];
-  const listOfCards = projects.map((project) => (
-    <Fragment key={project.id}>
-      <Card
-        name={project.name}
-        location={project.path}
-        img={project.img}
-      />
+  const listOfCards = allProjects.map((projectType) => (
+    <Fragment key={projectType.type}>
+      <h2 className="main-head-style">List of React Projects for {projectType.type} in 2023</h2>
+      <h3 className="sub-head-style mb-4">Explore the {projectType.length} projects for enhancing your learning</h3>
+      <div className="card-list">
+        {projectType.projects.map((project) => (
+          <Fragment key={projectType.type + project.id}>
+            <Card
+              name={project.name}
+              location={project.path}
+              img={project.img}
+            />
+          </Fragment>))}
+      </div>
     </Fragment>
-
   ));
   return (
-    <>
-      <h1 className="main-head">React Projects for Beginners in 2023</h1>
-      <h2 className="sub-head">Explore the 7 projects for enhancing your learning</h2>
-      <div className="card-list">
-        {listOfCards}
-      </div>
-    </>
+    <div className="initialRoot">
+      <h1 className="main-head">React Projects</h1>
+      {listOfCards}
+    </div>
   );
 }
 
