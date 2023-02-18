@@ -1,0 +1,11 @@
+.footerInitial {
+  color: #4b5c68;
+  background-color: #f6f7f7 !important;
+  text-align: end;
+  border-radius: 0 !important;
+  margin-top: 2.3em;
+  font-weight: 700;
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+}
