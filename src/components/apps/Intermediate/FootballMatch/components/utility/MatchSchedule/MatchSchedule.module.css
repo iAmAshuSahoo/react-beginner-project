@@ -1,0 +1,50 @@
+.table {
+  width: 90% !important;
+  margin: 0 auto;
+  color: #4b5c68 !important;
+  margin-bottom: 70px !important;
+}
+
+.tableHeadRow {
+  font-size: 12px;
+  height: 40px;
+  background-color: #e4edf2;
+}
+
+.tableRow {
+  font-size: 14px;
+}
+
+.bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.table > tbody > tr:nth-child(even) > td,
+.table > tbody > tr:nth-child(even) > th {
+  background-color: #e4edf2;
+  border-color: #e4edf2;
+}
+
+tr {
+  height: 70px;
+}
+
+.rightFormat {
+  text-align: right;
+}
+.leftFormat {
+  text-align: left;
+}
+
+@media only screen and (max-width: 750px) {
+  .disableOn750 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .disableOn500 {
+    display: none;
+  }
+}
