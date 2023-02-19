@@ -9,9 +9,10 @@ import {
   // createBrowserRouter,   // remove createHashRouter in the FUTURE added this for using it in ghPages
   RouterProvider,
 } from "react-router-dom";
-import Ecommerce from './components/apps/e-commerceApp/Ecommerce';
+// import Ecommerce from './components/apps/beginner/EcommerceApp/Ecommerce';
 import Leaderboard from './components/apps/Intermediate/FootballMatch/components/Pages/Leaderboard/Leaderboard';
 import PageNotFound from './components/apps/Intermediate/FootballMatch/components/Pages/PageNotFound/PageNotFound';
+// import QuoteApp from './components/apps/beginner/QuoteApp/QuoteApp';
 
 
 const router = createHashRouter([
@@ -28,10 +29,10 @@ const router = createHashRouter([
     path: "/faq",
     element: <Faq />,
   },
-  {
-    path: "/ecom",
-    element: <Ecommerce />,
-  },
+  // {
+  //   path: "/ecom",
+  //   element: <Ecommerce />,
+  // },
   {
     path: "/footballMatch",
     element: <Schedule />,
@@ -49,12 +50,18 @@ const router = createHashRouter([
     path: "/footballMatch/*",
     element: <PageNotFound />,
   },
+  // {
+  //   path: "/quote",
+  //   element: <QuoteApp />,
+  // },
 ], {
   basename: process.env.PUBLIC_URL
 });
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App
