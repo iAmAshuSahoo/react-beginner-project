@@ -122,9 +122,7 @@ It is important for the created UI to look as close to the above screenshots as 
 - The 404 image is displayed in its original size.
 - The images below shows the most important dimensions:
 
-_From <<https://enworld.codeaid.io/2433/challenge?token=7CmD9xghuE>>_
-
-API Details
+## API Details
 
 The existing API is rather simple. The API will run on  <http://localhots:3001/>. This should be the default host and port.
 
