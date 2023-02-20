@@ -45,9 +45,22 @@ It is important to make sure that code can be built for production succesfully b
 The test file to verify src/services/LeagueService.js is located at tests/leaderboard.test.js. Feel free to modify the code there in order to test your work.
 It is important to implement all methods on src/services/LeagueService.js and TO NOT CHANGE the interface of them.
 
-To run the tests just run this command. 
+To run the tests just run this command.
 
 ```shell
 npm test
 ```
 
+Open the application at [quote app link](https://iamashusahoo.github.io/react-beginner-project/quote)
+
+## Technologies used:
+
+1. HTML
+2. CSS
+3. JavaScript
+4. ReactJs 18
+5. React Router v5
+
+## Hoisted Site
+
+https://iamashusahoo.github.io/react-beginner-project/#/football/

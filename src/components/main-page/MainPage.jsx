@@ -21,6 +21,13 @@ function MainPage() {
             path: "faq/",
             img: "assets/img/faq.PNG",
           },
+          // {
+          //   id: "Proj3",
+          //   type: "Beginner",
+          //   name: "Quote app",
+          //   path: "quote/",
+          //   img: "assets/img/quote.PNG",
+          // },
         ],
     },
     {
@@ -32,7 +39,7 @@ function MainPage() {
             type: "Intermediate",
             name: "Football Match app",
             path: "footballMatch/",
-            img: "assets/img/carousal.PNG",
+            img: "assets/img/football.PNG",
           },
         ]
     }
