@@ -63,4 +63,4 @@ Open the application at [quote app link](https://iamashusahoo.github.io/react-be
 
 ## Hoisted Site
 
-https://iamashusahoo.github.io/react-beginner-project/#/football/
+https://iamashusahoo.github.io/react-beginner-project/#/footballMatch/
