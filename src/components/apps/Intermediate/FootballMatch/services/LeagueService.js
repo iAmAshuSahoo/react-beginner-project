@@ -6,6 +6,7 @@
  *       AND PLEASE DO NOT RENAME, MOVE OR DELETE THIS FILE.
  *
  */
+import { server } from "./mock-server";
 class LeagueService {
   /**
    * Sets the match schedule.
@@ -183,28 +184,31 @@ class LeagueService {
 
   // When Server is unavailable - Temporary fix for GH action
   authToken() {
-    return fetch("../../../../../../dev-mock-server-config.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const api = data.api[1];
-        if (api.path === "/api/v1/getAccessToken") {
-          return api.response;
-        }
-      });
+    // return (
+    // fetch(server)
+    // .then((response) => response.json())
+    // .then((data) => {
+    //   console.log(data);
+    const api = server.api[1];
+    if (api.path === "/api/v1/getAccessToken") {
+      return api.response;
+    }
+    // })
+    // );
   }
 
   fetchMatches(fetchHeader) {
-    return fetch("../../../../../../dev-mock-server-config.json", fetchHeader)
-      .then((response) => response.json())
-      .then((data) => {
-        const api = data.api[0];
-        if (api.path === "/api/v1/getAllMatches") {
-          if (api.response && api.response.matches) {
-            this.setMatches(api.response.matches);
-            return api.response.matches;
-          }
-        }
-      });
+    // return fetch("server", fetchHeader)
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    const api = server.api[0];
+    if (api.path === "/api/v1/getAllMatches") {
+      if (api.response && api.response.matches) {
+        this.setMatches(api.response.matches);
+        return api.response.matches;
+      }
+    }
+    // });
   }
 
   async fetchData() {
