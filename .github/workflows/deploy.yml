@@ -22,11 +22,14 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Start server
-        run: npm run server
-
       - name: Build project
         run: npm run build
+
+      - name: Start server
+        run: |
+          npm run server &
+          sleep 5 &&
+          curl http://localhost:3001/api/version
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
