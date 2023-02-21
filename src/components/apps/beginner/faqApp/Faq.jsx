@@ -3,6 +3,7 @@ import { questions } from './faqQuestions';
 import { Link } from "react-router-dom";
 import ShowQuestion from './ShowQuestion';
 import "./Faq.css";
+import BeginnerLayout from '../beginnerUtility/BeginnerLayout/BeginnerLayout';
 
 export default function Faq() {
     const [openOneFaq, setOpenOneFaq] = useState(true);
@@ -48,14 +49,12 @@ export default function Faq() {
     }
 
     return (
-        <div className='initialRoot'>
-            <Link to={"/"}><p className="home">Go to Home</p></Link>
-            <h1 className='main-head'>Project 2: FAQ/Accordian</h1>
+        <BeginnerLayout headingTitle="Project 2: FAQ/Accordian">
             <div id="faq-style">
                 <h2>FAQ</h2>
                 <button className='open-faq' onClick={handleOpenFaq}>{openOneFaq ? "Open all FAQ" : "Open ONLY one Faq"}</button>
                 {showAllQuestions}
             </div>
-        </div>
+        </BeginnerLayout>
     );
 }
