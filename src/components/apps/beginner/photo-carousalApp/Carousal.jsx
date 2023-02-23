@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import BeginnerLayout from "../beginnerUtility/BeginnerLayout/BeginnerLayout";
 import "./Carousal.css";
 
 function Carousal() {
@@ -29,9 +29,7 @@ function Carousal() {
     }
   }
   return (
-    <div className="initialRoot">
-      <Link to={"/"}><p className="home">Go to Home</p></Link>
-      <h1 className="main-head">Project 1: Carousal</h1>
+    <BeginnerLayout headingTitle="Project 1: Carousal">
       <div className="carousal-card">
         <button className="btnAttr" onClick={changeImage}>
           Back
@@ -41,7 +39,7 @@ function Carousal() {
           Front
         </button>
       </div>
-    </div>
+    </BeginnerLayout>
   );
 }
 
