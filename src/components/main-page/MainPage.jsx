@@ -21,13 +21,13 @@ function MainPage() {
             path: "faq/",
             img: "assets/img/faq.PNG",
           },
-          // {
-          //   id: "Proj3",
-          //   type: "Beginner",
-          //   name: "Quote app",
-          //   path: "quote/",
-          //   img: "assets/img/quote.PNG",
-          // },
+          {
+            id: "Proj3",
+            type: "Beginner",
+            name: "Quote app",
+            path: "quote/",
+            img: "assets/img/quote.PNG",
+          },
         ],
     },
     {
