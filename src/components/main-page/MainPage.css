@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   margin-bottom: 3em;
   gap: 2.5em;
+  justify-content: center;
 }
 
 .main-head {
@@ -16,6 +17,7 @@
   font-size: 2em;
   font-weight: bold;
 }
+
 .card-arrange {
   display: flex;
 }
@@ -24,12 +26,15 @@
   .card-list {
     justify-content: center;
   }
+
   .main-head {
     font-size: 2em;
   }
+
   .main-head-style {
     font-size: 1.5em;
   }
+
   .sub-head-style {
     font-size: 1.2em;
   }

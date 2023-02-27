@@ -28,6 +28,13 @@ function MainPage() {
             path: "quote/",
             img: "assets/img/quote.PNG",
           },
+          {
+            id: "Proj4",
+            type: "Beginner",
+            name: "Shopping List app",
+            path: "shoppingList/",
+            img: "assets/img/quote.PNG",
+          },
         ],
     },
     {
