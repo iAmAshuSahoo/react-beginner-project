@@ -25,6 +25,7 @@ You can open the application at [hoisted link](https://iamashusahoo.github.io/re
 1. [Photo-Carousal app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/photo-carousalApp)
 2. [FAQ/Accordian app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/faqApp)
 3. [Football League app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/Intermediate/FootballMatch)
+4. [Quote Generator app](https://github.com/iAmAshuSahoo/react-beginner-project/tree/main/src/components/apps/beginner/QuoteApp)
 
 ## Hoisted Site
 
