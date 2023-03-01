@@ -9,7 +9,9 @@ import {
   // createBrowserRouter,   // remove createHashRouter in the FUTURE added this for using it in ghPages
   RouterProvider,
 } from "react-router-dom";
-// import Ecommerce from './components/apps/beginner/EcommerceApp/Ecommerce';
+import ShoppingList from './components/apps/beginner/ShoppingList/ShoppingList';
+// import ShoppingListReducer from './components/apps/beginner/ShoppingList/ShoppingListReducer/ShoppingListReducer';
+// import ShoppingListContext from './components/apps/beginner/ShoppingList/ShoppingListContext/ShoppingListContext';
 import Leaderboard from './components/apps/Intermediate/FootballMatch/components/Pages/Leaderboard/Leaderboard';
 import PageNotFound from './components/apps/Intermediate/FootballMatch/components/Pages/PageNotFound/PageNotFound';
 import QuoteApp from './components/apps/beginner/QuoteApp/QuoteApp';
@@ -53,6 +55,12 @@ const router = createHashRouter([
   {
     path: "/quote",
     element: <QuoteApp />,
+  },
+  {
+    path: "/shoppingList",
+    element: <ShoppingList />,
+    // element: <ShoppingListReducer />,
+    // element: <ShoppingListContext />,
   },
 ], {
   basename: process.env.PUBLIC_URL

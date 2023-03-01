@@ -3,6 +3,11 @@
   height: 100vh;
 }
 
+.bg-pink {
+  background-color: pink;
+  height: 100vh;
+}
+
 .bg-white {
   background-color: white;
   height: 100vh;
