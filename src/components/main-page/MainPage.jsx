@@ -33,7 +33,7 @@ function MainPage() {
             type: "Beginner",
             name: "Shopping List app",
             path: "shoppingList/",
-            img: "assets/img/quote.PNG",
+            img: "assets/img/shopping.PNG",
           },
         ],
     },
