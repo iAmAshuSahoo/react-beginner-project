@@ -4,7 +4,7 @@ This is the created fourth in the list. Funcitonality wise this is an easy proje
 
 In this project we generate quotes that will render on Click of button.
 
-Open the application at [quote app link](https://iamashusahoo.github.io/react-beginner-project/quote)
+Open the application at [quote app link](https://iamashusahoo.github.io/react-beginner-project/#/quote)
 
 ## Technologies used:
 

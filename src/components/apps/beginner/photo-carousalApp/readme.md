@@ -4,7 +4,7 @@ This is the first project in the list.
 
 In this project we have added some pictures that will render on Click of buttons like a slideshow.
 
-Open the application at [link](https://iamashusahoo.github.io/react-beginner-project/carousal)
+Open the application at [link](https://iamashusahoo.github.io/react-beginner-project/#/carousal)
 
 ## Technologies used:
 
