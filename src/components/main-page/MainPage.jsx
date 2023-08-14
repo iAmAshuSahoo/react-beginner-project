@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Card from "../card/Card";
 import "./MainPage.css"
+import { Outlet, Link } from "react-router-dom";
 
 function MainPage() {
   const allProjects = [
@@ -35,6 +36,13 @@ function MainPage() {
             path: "shoppingList/",
             img: "assets/img/shopping.PNG",
           },
+          {
+            id: "Proj5",
+            type: "Beginner",
+            name: "Github Username app",
+            path: "githubUser/",
+            img: "assets/img/shopping.PNG",
+          },
         ],
     },
     {
@@ -57,13 +65,12 @@ function MainPage() {
       <h3 className="sub-head-style mb-4">Explore the {projectType.length} projects for enhancing your learning</h3>
       <div className="card-list">
         {projectType.projects.map((project) => (
-          <Fragment key={projectType.type + project.id}>
-            <Card
-              name={project.name}
-              location={project.path}
-              img={project.img}
-            />
-          </Fragment>))}
+          <Link to={project.path} key={projectType.type + project.id}>
+              <Card
+                name={project.name}
+                img={project.img}
+              />
+          </Link>))}
       </div>
     </Fragment>
   ));

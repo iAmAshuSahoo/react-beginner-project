@@ -1,18 +1,15 @@
 import "./Card.css";
-import { Outlet, Link } from "react-router-dom";
 
-function Card({ name, img, location }) {
+function Card({ name, img, urlRedirect, redirect }) {
   return (
-    <Link to={location}>
       <div className="card-project">
         <img src={img} alt="Avatar" className="project-image" />
         <div className="container">
           <h4>
-            {name}
+            {redirect ? <a href={urlRedirect} target="_blank" rel="noopener noreferrer">{name}</a> : <span>{name}</span>}
           </h4>
         </div>
       </div>
-    </Link>
   );
 }
 

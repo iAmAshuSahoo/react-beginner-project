@@ -15,6 +15,7 @@ import ShoppingList from './components/apps/beginner/ShoppingList/ShoppingList';
 import Leaderboard from './components/apps/Intermediate/FootballMatch/components/Pages/Leaderboard/Leaderboard';
 import PageNotFound from './components/apps/Intermediate/FootballMatch/components/Pages/PageNotFound/PageNotFound';
 import QuoteApp from './components/apps/beginner/QuoteApp/QuoteApp';
+import GithubUserInfo from './components/apps/beginner/githubUserInfo/GithubUserInfo';
 
 
 const router = createHashRouter([
@@ -31,10 +32,10 @@ const router = createHashRouter([
     path: "/faq",
     element: <Faq />,
   },
-  // {
-  //   path: "/ecom",
-  //   element: <Ecommerce />,
-  // },
+  {
+    path: "/githubUser",
+    element: <GithubUserInfo />,
+  },
   {
     path: "/footballMatch",
     element: <Schedule />,

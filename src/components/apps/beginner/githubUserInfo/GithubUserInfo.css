@@ -1,0 +1,21 @@
+.user-detail {
+    padding: 12px;
+    font-size: 13px;
+    width: 23em;
+    height: 3em;
+
+}
+
+#userDetail::placeholder{
+    color: black;
+}
+
+#btn-color {
+    background-color: lightgreen;
+}
+
+.github-header {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
