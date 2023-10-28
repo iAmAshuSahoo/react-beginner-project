@@ -63,6 +63,10 @@ const router = createHashRouter([
     // element: <ShoppingListReducer />,
     // element: <ShoppingListContext />,
   },
+  {
+    path: "/namasteReact",
+    element: <NamasteReactNotes />,
+  },
 ], {
   basename: process.env.PUBLIC_URL
 });

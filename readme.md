@@ -19,6 +19,8 @@ You can open the application at [hoisted link](https://iamashusahoo.github.io/re
 5. React Router 6.7.0
 6. React Bootstrap 2.7.0
 7. Json Fake Server 0.0.2
+8. Axios
+9. Lodash
 
 ## React Beginners Project
 
