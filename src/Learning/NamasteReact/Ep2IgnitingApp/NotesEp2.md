@@ -21,3 +21,17 @@ This is not production ready
 
 So react itself is not making our app go fast. There are many libraries working behind.
 We use npm for installing those libraries - standard repository that manages the packages.
+
+# To make the app take use of npm packages
+
+1. npm init
+2. It asks for valus and provides us with package.json
+3. This file contains packages. These packages are also called dependencies as they are used to build our project.
+4. npm manages the version of package in package.json
+5. So package.json is configuration for project.
+6. Install Bundler - Our whole code need to be optime, minified, - webpack, parcel, vite.
+7. Bundler will ignite our app.
+8. 2 types of packages
+a. devDependency - when we require that we need that dependency. npm i -D (add -D for dev dependency).
+b. normal dependency - when the dependency in both dev and production.
+

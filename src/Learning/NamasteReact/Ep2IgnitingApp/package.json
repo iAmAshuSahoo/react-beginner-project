@@ -1,0 +1,30 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is course Namaste React by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iAmAshuSahoo/react-beginner-project.git"
+  },
+  "keywords": [
+    "react",
+    "namaste",
+    "react",
+    "ashutosh",
+    "sahoo",
+    "iamashusahoo"
+  ],
+  "author": "Ashutosh Sahoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iAmAshuSahoo/react-beginner-project/issues"
+  },
+  "homepage": "https://github.com/iAmAshuSahoo/react-beginner-project#readme",
+  "dependencies": {
+    "parcel": "^2.10.3"
+  }
+}
