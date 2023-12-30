@@ -12,11 +12,11 @@ CDN is Content Delivery Network
 Problem Solving - when someone is making a purchase and they are sitting at a geologically different place. It leads them to face delay due to time taken by packets and bad user experience. Here CDN helps. Cloudflare is a company. CDN helps in hoisting huge content near customer.
 
 HW1 -
-CDN is not a replacement to web hoisting. CDN help in imporving performance. It depends on sixe and need of internet.
+CDN is not a replacement to web hoisting. CDN help in imporving performance. It depends on size and need of internet.
 1. Improving website load times
 2. Reducing bandwith costs
 3. Increase content availability and redundancy.
-4. Improving wensite security - DDoS Attack  -  When site becomes popular, hacker try to block system by doing a distributed attack such that they create bot army from many available machines to use your resources. Thus resulting in network error. Here the Cloudflare CDN helps in distributing the false request protecting customers interests.
+4. Improving website security - DDoS Attack  -  When site becomes popular, hacker try to block system by doing a distributed attack such that they create bot army from many available machines to use your resources. Thus resulting in network error. Here the Cloudflare CDN helps in distributing the false request protecting customers interests.
 
 **Be Curious about everything** - Dive deep into every small thing.
 HW2-
