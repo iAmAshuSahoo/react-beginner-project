@@ -69,15 +69,15 @@ We use npm for installing those libraries - standard repository that manages the
 - Error Handling
 - HTTPs
 - Tree Shaking Experience - It  removes unused code.
-- Web worker
-- Service worker
+- Web worker - Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the fetch() or XMLHttpRequest APIs.
+- Service worker - Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available).
 - Different dev and prod build - for prod build *npx parcel build index.html*
 26. Parcel cannot do everything on its own, it makes use of the underlying packages.
 27. Read docs for understanding how Parcel is helping to improve our experience.
 28. "main": "App.js" In the package json - Don't need this when using parcel for prod build. It takes more time to create the build as parcel is making the build fast, optimize.
 29. Any code that is auto generated is not required on the git. So, we dont put node modules, dist on git.
 30. from local we pushed package json to git, server fetches the package json and run npm i on server, server has its own node modules and dist.
-31. We can make use of browserslist - configure this on package json.
+31. We can make use of browserslist - configure this on package json. To make application browser compatible.
 
 
 
