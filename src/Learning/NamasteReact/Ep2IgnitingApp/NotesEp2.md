@@ -9,6 +9,8 @@
 7. git add origin main
 
 # Difference between Git and GitHub?
+Git - used for version control. Maintained by Linux. Open source.
+Github - used for hoisting. Maintained by Microsoft. follow pricing model.
 
 # Problems in code in Ep1Inception
 
@@ -32,6 +34,15 @@ We use npm for installing those libraries - standard repository that manages the
 6. Install Bundler - Our whole code need to be optime, minified, - webpack, parcel, vite.
 7. Bundler will ignite our app.
 8. 2 types of packages
-a. devDependency - when we require that we need that dependency. npm i -D (add -D for dev dependency).
-b. normal dependency - when the dependency in both dev and production.
+- devDependency - when we require that we need that dependency. npm i -D (add -D for dev dependency).
+- normal dependency - when the dependency in both dev and production.
+9. Caret and Tilde - If present package is 2.8.3
+- ^ - updates when there is minor changes. updates at 2.8.4
+- ~ - updates when there is a major change. updates at 3.0.0
+10. When I did npm i -D parcel, it removed parcel from normal dependency and moved to devDependency.
+11. package.json - configuration of npm. keeps track of all package installed.
+12. package-lock - It locks the package file and keeps track of exact version that is installed.
+13. there is a integrity in package-lock parcel that contains the hash that needs to match with prod environment.
+14. This file contains the exact version of all packages. same dependencies are installed consistently across different environments.
+
 

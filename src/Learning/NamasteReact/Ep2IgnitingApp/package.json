@@ -24,7 +24,8 @@
     "url": "https://github.com/iAmAshuSahoo/react-beginner-project/issues"
   },
   "homepage": "https://github.com/iAmAshuSahoo/react-beginner-project#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "parcel": "^2.10.3"
   }
 }
