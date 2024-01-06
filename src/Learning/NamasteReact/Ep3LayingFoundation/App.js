@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const heading = React.createElement('h2', {id: "heading"}, "Hello from React from App file!");
+const jsxHead = <h1 className='head'>Namaste React</h1>
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const parent = React.createElement('div', {id: 'parent'}, 
