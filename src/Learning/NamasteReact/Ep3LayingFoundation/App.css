@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    background-color: beige;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.searchBar {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 4%;
+}

@@ -8,7 +8,7 @@
 1. React Element - They are equivalent to DOM element. This is a Object. This gets rendered to HTML element.
 const heading = React.createElement("h1", {id: "head"}, "Namaste React")
 2. To render the react element on the screen to convert into DOM element we have.
-const root = ReactDOM.createRoot(documet.getElementById("root));
+const root = ReactDOM.createRoot(document.getElementById("root));
 root.render(heading)
 3. This was clumsy, to resolve this React devs introduced JSX.
 4. JSX is HTML like syntax.
@@ -21,3 +21,17 @@ const jsxHeading = <h1 id: "head"> "Namaste React"</h1>
 (<h1 id: "head"> 
 "Namaste React"
 </h1>)
+
+# React Component
+1. React Component --- Class Based and Functional Component
+2. React Functional Component - function that returns JSX
+3. When babel see <> angular bracket it understands this is a react component.
+4. Component composition - To put a component inside component. Composing component with existing comp.
+5. We can use normal function but arrow function is newer way and insdustry recommended way.
+6. Adding **curly braces** helps execute javascript within them.
+7. We can make use of element inside component or component inside element and render element or component.
+8. As the value is getting executed and render in browser, during api calls attacker can attack and steal data, this is cross site scripting.
+9. When data is sent in JSX, it sanitizes the data then render. This prevent cross site scripting attacks. How??
+10. At the end of the day,
+React is Javascript, JSX is React Element, React Elements are objects, Components are functions.
+11. 
