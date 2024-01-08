@@ -54,3 +54,30 @@ const Header = () => (
 // root.render(jsxHead);
 root.render(<HeadComponent />);
 // root.render(<HeadComponent />);
+
+
+// RDS -> Sample
+async function challenge() {
+    const res = await fetch("https://exam.ankush.wiki/challenges");
+    resData = await res.json();
+    let count = 0;
+    resData.data.forEach(item =>  {
+        if(item.name.toLowerCase().includes("version")) {
+            const versionOccurence = (item.name.toLowerCase().match(/version/g) || []).length;
+            count+=versionOccurence;
+        }
+    });
+    const postRes = await fetch("https://exam.ankush.wiki/challenges", {
+      method: "POST",
+      body: JSON.stringify({
+        count
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    });
+    const postResData = await postRes.json();
+    console.log(postResData);
+}
+challenge()
+
