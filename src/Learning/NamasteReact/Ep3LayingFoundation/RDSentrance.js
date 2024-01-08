@@ -150,7 +150,7 @@ const assignments = async () => {
     );
     console.log("orderedData", JSON.stringify(orderedData));
     const chaincode = Object.values(orderedData).join('');
-    const postRes = await fetch("https://exam.ankush.wiki/assignments", {
+    const postRes = await fetch("https://exam.ankush.wiki/answers", {
       method: "POST",
       body: JSON.stringify({
         chaincode
@@ -168,7 +168,101 @@ assignments();
 //////////////////////////////////////////////////////////////////////////////////
 
 
-  
+const morseCode = {
+    "-----": "0",
+    ".----": "1",
+    "..---": "2",
+    "...--": "3",
+    "....-": "4",
+    ".....": "5",
+    "-....": "6",
+    "--...": "7",
+    "---..": "8",
+    "----.": "9",
+    ".-": "A",
+    "-...": "B",
+    "-.-.": "C",
+    "-..": "D",
+    ".": "E",
+    "..-.": "F",
+    "--.": "G",
+    "....": "H",
+    "..": "I",
+    ".---": "J",
+    "-.-": "K",
+    ".-..": "L",
+    "--": "M",
+    "-.": "N",
+    "---": "O",
+    ".--.": "P",
+    "--.-": "Q",
+    ".-.": "R",
+    "...": "S",
+    "-": "T",
+    "..-": "U",
+    "...-": "V",
+    ".--": "W",
+    "-..-": "X",
+    "-.--": "Y",
+    "--..": "Z",
+  };
+
+const timer = (ms) => new Promise((res) => setTimeout(res, ms));
+
+async function getData() {
+    const numParts = 22;
+    console.log({ numParts });
+
+    const decode = {};
+   
+    for (let i = 1; i <= numParts; i++) {
+      const res = await fetch("/data?part=" + i);
+      const { data } = await res.json();
+      const seperation = data.join("").split("➡➡➡");
+
+      let key, value;
+
+      seperation.forEach((morse) => {
+        if (morse.length >= 5) {
+          const x1 = morse.substring(0, 5);
+          const x2 = morse.substring(5, 10);
+          let val = "";
+          if (x1) {
+            val += morseCode[x1];
+          }
+          if (x2) {
+            val += morseCode[x2];
+          }
+          key = val;
+        } else {
+          value = morseCode[morse];
+        }
+      });
+      decode[key] = value;
+      await timer(2500);
+      console.log({ chainCode: decode });
+    }
+    await timer(500);
+
+    let chainCode = "";
+
+    for (const key in decode) {
+      if (Object.prototype.hasOwnProperty.call(decode, key)) {
+        chainCode += decode[key];
+      }
+    }
+
+    console.log(chainCode);
+
+    const submit = await fetch("/answers", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chaincode: chainCode,
+      }),
+    });
+    console.log(await submit.json());
+  }
 // https://exam.ankush.wiki/data?part=1
 // {"data":[".","-","-","-","-",".",".",".",".","-","➡➡➡",".","-","-"]}
 
