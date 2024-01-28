@@ -21,6 +21,7 @@ You can open the application at [hoisted link](https://iamashusahoo.github.io/re
 7. Json Fake Server 0.0.2
 8. Axios
 9. Lodash
+10. AG Grid - Component based table
 
 ## React Beginners Project
 

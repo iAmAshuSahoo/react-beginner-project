@@ -50,10 +50,17 @@ function MainPage() {
       projects:
         [
           {
-            id: "Proj1",
+            id: "InProj1",
             type: "Intermediate",
             name: "Football Match app",
             path: "footballMatch/",
+            img: "assets/img/football.PNG",
+          },
+          {
+            id: "InProj2",
+            type: "Intermediate",
+            name: "AG grid app",
+            path: "ag-grid/",
             img: "assets/img/football.PNG",
           },
         ]

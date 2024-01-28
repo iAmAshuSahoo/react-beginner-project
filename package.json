@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ag-grid-react": "^31.0.3",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "json-fake-server": "0.0.2",

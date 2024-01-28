@@ -16,6 +16,7 @@ import Leaderboard from './components/apps/Intermediate/FootballMatch/components
 import PageNotFound from './components/apps/Intermediate/FootballMatch/components/Pages/PageNotFound/PageNotFound';
 import QuoteApp from './components/apps/beginner/QuoteApp/QuoteApp';
 import GithubUserInfo from './components/apps/beginner/githubUserInfo/GithubUserInfo';
+import AGgrid from './components/apps/Intermediate/AGgrid/AGgrid';
 
 
 const router = createHashRouter([
@@ -62,6 +63,10 @@ const router = createHashRouter([
     element: <ShoppingList />,
     // element: <ShoppingListReducer />,
     // element: <ShoppingListContext />,
+  },
+  {
+    path: "/ag-grid",
+    element: <AGgrid />,
   },
 ], {
   basename: process.env.PUBLIC_URL
