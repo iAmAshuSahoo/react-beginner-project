@@ -63,6 +63,20 @@ function MainPage() {
             path: "ag-grid/",
             img: "assets/img/football.PNG",
           },
+          {
+            id: "InProj3",
+            type: "Intermediate",
+            name: "React Table app",
+            path: "react-table/",
+            img: "assets/img/football.PNG",
+          },
+          {
+            id: "InProj4",
+            type: "Intermediate",
+            name: "Water Tank Problem",
+            path: "water-tank/",
+            img: "assets/img/football.PNG",
+          },
         ]
     }
   ];

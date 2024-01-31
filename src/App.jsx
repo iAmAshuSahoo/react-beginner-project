@@ -17,6 +17,8 @@ import PageNotFound from './components/apps/Intermediate/FootballMatch/component
 import QuoteApp from './components/apps/beginner/QuoteApp/QuoteApp';
 import GithubUserInfo from './components/apps/beginner/githubUserInfo/GithubUserInfo';
 import AGgrid from './components/apps/Intermediate/AGgrid/AGgrid';
+import ReactTable from './components/apps/Intermediate/ReactTable/ReactTable';
+import WaterTank from './components/apps/Intermediate/WaterTank/WaterTank';
 
 
 const router = createHashRouter([
@@ -67,6 +69,14 @@ const router = createHashRouter([
   {
     path: "/ag-grid",
     element: <AGgrid />,
+  },
+  {
+    path: "/react-table",
+    element: <ReactTable />,
+  },
+  {
+    path: "/water-tank",
+    element: <WaterTank />,
   },
 ], {
   basename: process.env.PUBLIC_URL

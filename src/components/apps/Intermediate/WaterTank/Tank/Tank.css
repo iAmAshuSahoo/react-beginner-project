@@ -1,0 +1,33 @@
+.bttn {
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.bttn-add {
+    padding: 10px 26px;
+    color: white;
+    background-color: green;
+}
+
+.bttn-empty {
+    color: red;
+    border: 1px solid red;
+}
+
+.tank {
+    border: 2px solid rgb(31, 42, 85);
+    border-radius: 5%;
+    height: 104px;
+    position: relative;
+}
+
+.water {
+    background-color: #4ccbf4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: height 1s ease-in-out;
+}

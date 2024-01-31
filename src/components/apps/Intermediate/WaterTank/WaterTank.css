@@ -1,0 +1,10 @@
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tank-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
