@@ -1,0 +1,31 @@
+.control-container {
+    margin-top: 20px;
+}
+
+.horizontal-dir {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-dir {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+  right: 61px;
+  position: relative;
+}
+
+.btn-emoji {
+    background-color: #efefefef;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 61px;
+    height: 45px;
+}
+
+.btn-emoji:hover {
+    background-color: #eeff00;
+    border: 1px solid yellow;
+}
