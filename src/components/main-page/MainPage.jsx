@@ -77,6 +77,13 @@ function MainPage() {
             path: "water-tank/",
             img: "assets/img/football.PNG",
           },
+          {
+            id: "InProj5",
+            type: "Intermediate",
+            name: "Custom FootBall Game",
+            path: "football-game/",
+            img: "assets/img/football.PNG",
+          },
         ]
     }
   ];

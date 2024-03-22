@@ -19,6 +19,7 @@ import GithubUserInfo from './components/apps/beginner/githubUserInfo/GithubUser
 import AGgrid from './components/apps/Intermediate/AGgrid/AGgrid';
 import ReactTable from './components/apps/Intermediate/ReactTable/ReactTable';
 import WaterTank from './components/apps/Intermediate/WaterTank/WaterTank';
+import CustomFootball from './components/apps/Intermediate/CustomFootball/CustomFootball';
 
 
 const router = createHashRouter([
@@ -77,6 +78,10 @@ const router = createHashRouter([
   {
     path: "/water-tank",
     element: <WaterTank />,
+  },
+  {
+    path: "/football-game",
+    element: <CustomFootball demo="World" />,
   },
 ], {
   basename: process.env.PUBLIC_URL
