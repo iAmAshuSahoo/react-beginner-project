@@ -4,26 +4,81 @@ import Controls from './Controls/Controls';
 import './CustomFootball.css';
 
 function CustomFootball() {
-    const [coordinates, setCoordinates] = useState({position: 'relative', top:"0px", left:"0px"});
+    const [coordinates, setCoordinates] = useState({position: 'relative', transition: "all 1500ms ease 0s", top:"0px", left:"0px"});
+    const [intervalId, setIntervalId] = useState(null)
 
     const topPressed = () => {
-        const intervalId = setInterval(() => {
+        clearInterval(intervalId);
+        const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let top = (parseInt(prevCoordinate.top) - 10) + 'px';
                 if(parseInt(prevCoordinate.top) < -145){   // -150
-                    clearInterval(intervalId);
+                    clearInterval(id);
                 } else {
                     return {...prevCoordinate, top}
                 }
                 return prevCoordinate;
             })
         }, 1000)
+        setIntervalId(id);
     }
+
+    const downPressed = () => {
+        clearInterval(intervalId);
+        const id = setInterval(() => {
+            setCoordinates(prevCoordinate => {
+                let top = (parseInt(prevCoordinate.top) + 10) + 'px';
+                if(parseInt(prevCoordinate.top) > 210){   // -150
+                    clearInterval(id);
+                } else {
+                    return {...prevCoordinate, top}
+                }
+                return prevCoordinate;
+            })
+        }, 1000)
+        setIntervalId(id);
+    }
+
+    const leftPressed = () => {
+        clearInterval(intervalId);
+        const id = setInterval(() => {
+            setCoordinates(prevCoordinate => {
+                let left = (parseInt(prevCoordinate.left) - 10) + 'px';
+                if(parseInt(prevCoordinate.left) < 10){   // -150
+                    clearInterval(id);
+                } else {
+                    return {...prevCoordinate, left}
+                }
+                return prevCoordinate;
+            })
+        }, 1000)
+        setIntervalId(id);
+    }
+
+    const rightPressed = () => {
+        clearInterval(intervalId);
+        const id = setInterval(() => {
+            setCoordinates(prevCoordinate => {
+                let left = (parseInt(prevCoordinate.left) + 10) + 'px';
+                if(parseInt(prevCoordinate.left) > 666){   // -150
+                    clearInterval(id);
+                } else {
+                    return {...prevCoordinate, left}
+                }
+                return prevCoordinate;
+            })
+        }, 1000)
+        setIntervalId(id);
+    }
+
     return (<div className='football-container'>
         <Game
             coordinates={coordinates} />
         <Controls
-            topPressed={topPressed} />
+            topPressed={topPressed}
+            downPressed={downPressed}
+            leftPressed={leftPressed}
+            rightPressed={rightPressed} />
     </div>)
 }
 
