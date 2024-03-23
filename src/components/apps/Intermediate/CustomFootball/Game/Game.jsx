@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import './Game.css';
 
-export default function Game({coordinates}) {
+export default function Game({coordinates, setCoordinates, intervalId}) {
     const [goal, setGoal] = useState({position: 'absolute', left: "0px", top: "0px"});
     const [overlapDetected, setOverlapDetected] = useState(false);
 
@@ -26,6 +26,8 @@ export default function Game({coordinates}) {
   
     useEffect(() => {
       if (overlapDetected) {
+        setCoordinates({position: 'absolute', top:"0px", left:"0px"})
+        clearInterval(intervalId);
         alert('Success!!!🎉🤩🌟You hit the goal');
       }
     }, [overlapDetected]); // Trigger alert when overlapDetected changes

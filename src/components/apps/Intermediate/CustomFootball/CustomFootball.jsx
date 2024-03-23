@@ -4,7 +4,7 @@ import Controls from './Controls/Controls';
 import './CustomFootball.css';
 
 function CustomFootball() {
-    const [coordinates, setCoordinates] = useState({position: 'absolute', transition: "all 1500ms ease 0s", top:"0px", left:"0px"});
+    const [coordinates, setCoordinates] = useState({position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"});
     const [intervalId, setIntervalId] = useState(null);
 
     const topPressed = () => {
@@ -71,9 +71,30 @@ function CustomFootball() {
         setIntervalId(id);
     }
 
-    return (<div className='football-container'>
+    const handleKeyPress = (event) => {
+        switch (event.key) {
+          case 'ArrowUp':
+            topPressed();
+            break;
+          case 'ArrowDown':
+            downPressed();
+            break;
+          case 'ArrowLeft':
+            leftPressed();
+            break;
+          case 'ArrowRight':
+            rightPressed();
+            break;
+          default:
+            break;
+        }
+      };
+
+    return (<div className='football-container' onKeyDown={handleKeyPress}>
         <Game
-            coordinates={coordinates} />
+            coordinates={coordinates}
+            setCoordinates={setCoordinates}
+            intervalId={intervalId} />
         <Controls
             topPressed={topPressed}
             downPressed={downPressed}
