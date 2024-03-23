@@ -4,15 +4,15 @@ import Controls from './Controls/Controls';
 import './CustomFootball.css';
 
 function CustomFootball() {
-    const [coordinates, setCoordinates] = useState({position: 'relative', transition: "all 1500ms ease 0s", top:"0px", left:"0px"});
-    const [intervalId, setIntervalId] = useState(null)
+    const [coordinates, setCoordinates] = useState({position: 'absolute', transition: "all 1500ms ease 0s", top:"0px", left:"0px"});
+    const [intervalId, setIntervalId] = useState(null);
 
     const topPressed = () => {
         clearInterval(intervalId);
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let top = (parseInt(prevCoordinate.top) - 10) + 'px';
-                if(parseInt(prevCoordinate.top) < -145){   // -150
+                if(parseInt(prevCoordinate.top) < 10){   // -150
                     clearInterval(id);
                 } else {
                     return {...prevCoordinate, top}
@@ -28,7 +28,7 @@ function CustomFootball() {
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let top = (parseInt(prevCoordinate.top) + 10) + 'px';
-                if(parseInt(prevCoordinate.top) > 210){   // -150
+                if(parseInt(prevCoordinate.top) > 360){   // -150
                     clearInterval(id);
                 } else {
                     return {...prevCoordinate, top}
