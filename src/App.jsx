@@ -20,6 +20,7 @@ import AGgrid from './components/apps/Intermediate/AGgrid/AGgrid';
 import ReactTable from './components/apps/Intermediate/ReactTable/ReactTable';
 import WaterTank from './components/apps/Intermediate/WaterTank/WaterTank';
 import CustomFootball from './components/apps/Intermediate/CustomFootball/CustomFootball';
+import AdvanceCustomFootball from './components/apps/Intermediate/AdvanceCustomFootball/AdvanceCustomFootball';
 
 
 const router = createHashRouter([
@@ -81,7 +82,11 @@ const router = createHashRouter([
   },
   {
     path: "/football-game",
-    element: <CustomFootball demo="World" />,
+    element: <CustomFootball />,
+  },
+  {
+    path: "/advance-football-game",
+    element: <AdvanceCustomFootball />,
   },
 ], {
   basename: process.env.PUBLIC_URL

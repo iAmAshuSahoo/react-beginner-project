@@ -80,8 +80,15 @@ function MainPage() {
           {
             id: "InProj5",
             type: "Intermediate",
-            name: "Custom FootBall Game",
+            name: "Custom Game",
             path: "football-game/",
+            img: "assets/img/football.PNG",
+          },
+          {
+            id: "InProj6",
+            type: "Intermediate",
+            name: "Advance Game",
+            path: "advance-football-game/",
             img: "assets/img/football.PNG",
           },
         ]
