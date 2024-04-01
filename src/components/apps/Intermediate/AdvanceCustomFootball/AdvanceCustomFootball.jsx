@@ -2,20 +2,27 @@ import {useState} from 'react';
 import Game from './Game/Game';
 import Controls from './Controls/Controls';
 import './AdvanceCustomFootball.css';
+import GameControl from './GameControl/GameControl';
+import {cloneDeep} from 'lodash'
 
 function AdvanceCustomFootball() {
-    const [coordinates, setCoordinates] = useState({position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"});
+    const [coordinates, setCoordinates] = useState([{position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"},
+    {position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"},
+    {position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"}]);
+
     const [intervalId, setIntervalId] = useState(null);
 
-    const topPressed = () => {
+    const topPressed = (ind) => {
         clearInterval(intervalId);
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
-                let top = (parseInt(prevCoordinate.top) - 10) + 'px';
-                if(parseInt(prevCoordinate.top) < 10){   // -150
+                let top = (parseInt(prevCoordinate[ind].top) - 10) + 'px';
+                if(parseInt(prevCoordinate[ind].top) < 10){   // -150
                     clearInterval(id);
                 } else {
-                    return {...prevCoordinate, top}
+                    const temp = cloneDeep(prevCoordinate);
+                    temp[ind].top = top;
+                    return temp;
                 }
                 return prevCoordinate;
             })
@@ -23,15 +30,17 @@ function AdvanceCustomFootball() {
         setIntervalId(id);
     }
 
-    const downPressed = () => {
+    const downPressed = (ind) => {
         clearInterval(intervalId);
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
-                let top = (parseInt(prevCoordinate.top) + 10) + 'px';
-                if(parseInt(prevCoordinate.top) > 360){   // -150
+                let top = (parseInt(prevCoordinate[ind].top) + 10) + 'px';
+                if(parseInt(prevCoordinate[ind].top) > 360){   // -150
                     clearInterval(id);
                 } else {
-                    return {...prevCoordinate, top}
+                    const temp = cloneDeep(prevCoordinate);
+                    temp[ind].top = top;
+                    return temp;
                 }
                 return prevCoordinate;
             })
@@ -39,15 +48,17 @@ function AdvanceCustomFootball() {
         setIntervalId(id);
     }
 
-    const leftPressed = () => {
+    const leftPressed = (ind) => {
         clearInterval(intervalId);
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
-                let left = (parseInt(prevCoordinate.left) - 10) + 'px';
-                if(parseInt(prevCoordinate.left) < 10){   // -150
+                let left = (parseInt(prevCoordinate[ind].left) - 10) + 'px';
+                if(parseInt(prevCoordinate[ind].left) < 10){   // -150
                     clearInterval(id);
                 } else {
-                    return {...prevCoordinate, left}
+                    const temp = cloneDeep(prevCoordinate);
+                    temp[ind].left = left;
+                    return temp;
                 }
                 return prevCoordinate;
             })
@@ -55,15 +66,17 @@ function AdvanceCustomFootball() {
         setIntervalId(id);
     }
 
-    const rightPressed = () => {
+    const rightPressed = (ind) => {
         clearInterval(intervalId);
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
-                let left = (parseInt(prevCoordinate.left) + 10) + 'px';
-                if(parseInt(prevCoordinate.left) > 666){   // -150
+                let left = (parseInt(prevCoordinate[ind].left) + 10) + 'px';
+                if(parseInt(prevCoordinate[ind].left) > 666){   // -150
                     clearInterval(id);
                 } else {
-                    return {...prevCoordinate, left}
+                    const temp = cloneDeep(prevCoordinate);
+                    temp[ind].left = left;
+                    return temp;
                 }
                 return prevCoordinate;
             })
@@ -74,16 +87,16 @@ function AdvanceCustomFootball() {
     const handleKeyPress = (event) => {
         switch (event.key) {
           case 'ArrowUp':
-            topPressed();
+            topPressed(0);
             break;
           case 'ArrowDown':
-            downPressed();
+            downPressed(0);
             break;
           case 'ArrowLeft':
-            leftPressed();
+            leftPressed(0);
             break;
           case 'ArrowRight':
-            rightPressed();
+            rightPressed(0);
             break;
           default:
             break;
@@ -95,11 +108,28 @@ function AdvanceCustomFootball() {
             coordinates={coordinates}
             setCoordinates={setCoordinates}
             intervalId={intervalId} />
-        <Controls
+        
+        <GameControl 
+            coordinates={coordinates}
+            setCoordinates={setCoordinates}
+            intervalId={intervalId}
+            ind={1}
             topPressed={topPressed}
             downPressed={downPressed}
             leftPressed={leftPressed}
-            rightPressed={rightPressed} />
+            rightPressed={rightPressed} 
+        />
+        {/* <GameControl /> */}
+        <div className="ground-control">
+            <Controls
+                ind={0}
+                topPressed={topPressed}
+                downPressed={downPressed}
+                leftPressed={leftPressed}
+                rightPressed={rightPressed} 
+            />
+            <button className='btn-emoji' onClick={() => clearInterval(intervalId)}>🛑</button>
+        </div>
     </div>)
 }
 
