@@ -10,10 +10,13 @@ function AdvanceCustomFootball() {
     {position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"},
     {position: 'absolute', transition: "all 1000ms ease 0s", top:"0px", left:"0px"}]);
 
-    const [intervalId, setIntervalId] = useState(null);
+    const [intervalId, setIntervalId] = useState([null, null, null]);
 
     const topPressed = (ind) => {
-        clearInterval(intervalId);
+        clearInterval(intervalId[ind]);
+        if ((coordinates.length - 2 === ind) && intervalId[ind+1]) {
+            clearInterval(intervalId[ind+1]);
+        }
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let top = (parseInt(prevCoordinate[ind].top) - 10) + 'px';
@@ -27,11 +30,16 @@ function AdvanceCustomFootball() {
                 return prevCoordinate;
             })
         }, 1000)
-        setIntervalId(id);
+        const inter = [...intervalId];
+        inter[ind] = id
+        setIntervalId(inter);
     }
 
     const downPressed = (ind) => {
-        clearInterval(intervalId);
+        clearInterval(intervalId[ind]);
+        if ((coordinates.length - 2 === ind) && intervalId[ind+1]) {
+            clearInterval(intervalId[ind+1]);
+        }
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let top = (parseInt(prevCoordinate[ind].top) + 10) + 'px';
@@ -45,11 +53,16 @@ function AdvanceCustomFootball() {
                 return prevCoordinate;
             })
         }, 1000)
-        setIntervalId(id);
+        const inter = [...intervalId];
+        inter[ind] = id
+        setIntervalId(inter);
     }
 
     const leftPressed = (ind) => {
-        clearInterval(intervalId);
+        clearInterval(intervalId[ind]);
+        if ((coordinates.length - 2 === ind) && intervalId[ind+1]) {
+            clearInterval(intervalId[ind+1]);
+        }
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let left = (parseInt(prevCoordinate[ind].left) - 10) + 'px';
@@ -63,11 +76,16 @@ function AdvanceCustomFootball() {
                 return prevCoordinate;
             })
         }, 1000)
-        setIntervalId(id);
+        const inter = [...intervalId];
+        inter[ind] = id
+        setIntervalId(inter);
     }
 
     const rightPressed = (ind) => {
-        clearInterval(intervalId);
+        clearInterval(intervalId[ind]);
+        if ((coordinates.length - 2 === ind) && intervalId[ind+1]) {
+            clearInterval(intervalId[ind+1]);
+        }
         const id = setInterval(() => {
             setCoordinates(prevCoordinate => {
                 let left = (parseInt(prevCoordinate[ind].left) + 10) + 'px';
@@ -81,7 +99,9 @@ function AdvanceCustomFootball() {
                 return prevCoordinate;
             })
         }, 1000)
-        setIntervalId(id);
+        const inter = [...intervalId];
+        inter[ind] = id
+        setIntervalId(inter);
     }
 
     const handleKeyPress = (event) => {
@@ -108,7 +128,16 @@ function AdvanceCustomFootball() {
             coordinates={coordinates}
             setCoordinates={setCoordinates}
             intervalId={intervalId} />
-        
+        <GameControl 
+            coordinates={coordinates}
+            setCoordinates={setCoordinates}
+            intervalId={intervalId}
+            ind={2}
+            topPressed={topPressed}
+            downPressed={downPressed}
+            leftPressed={leftPressed}
+            rightPressed={rightPressed} 
+        />
         <GameControl 
             coordinates={coordinates}
             setCoordinates={setCoordinates}
@@ -119,7 +148,6 @@ function AdvanceCustomFootball() {
             leftPressed={leftPressed}
             rightPressed={rightPressed} 
         />
-        {/* <GameControl /> */}
         <div className="ground-control">
             <Controls
                 ind={0}
@@ -128,7 +156,7 @@ function AdvanceCustomFootball() {
                 leftPressed={leftPressed}
                 rightPressed={rightPressed} 
             />
-            <button className='btn-emoji' onClick={() => clearInterval(intervalId)}>🛑</button>
+            <button className='btn-emoji' onClick={() => clearInterval(intervalId[0])}>🛑</button>
         </div>
     </div>)
 }

@@ -6,18 +6,18 @@ export default function Controls({ind, topRef, leftRef, rightRef, bottomRef, top
         <div className="horizontal-dir">
             <button className="up btn-emoji" 
                 ref={topRef}
-                onMouseDown={() => topPressed(ind)}>⬆️</button>
+                onMouseDown={() => ind === 0 ? topPressed(ind) : null}>⬆️</button>
             <div className="vertical-dir">
                 <button className="left btn-emoji" 
-                    onClick={() => leftPressed(ind)}
+                    onClick={() => ind === 0 ? leftPressed(ind) : null}
                     ref={leftRef}
                     >⬅️</button>
                 <button className="right btn-emoji" 
-                    onClick={() => rightPressed(ind)}
+                    onClick={() => ind === 0 ? rightPressed(ind) : null}
                     ref={rightRef}>➡️</button>
             </div>
             <button className="down btn-emoji" 
-                onClick={() => downPressed(ind)}
+                onClick={() => ind === 0 ? downPressed(ind) : null}
                 ref={bottomRef}>⬇️</button>
         </div>
     )

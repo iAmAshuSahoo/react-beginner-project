@@ -63,6 +63,18 @@ function GameControl({coordinates, setCoordinates, intervalId, ind, topPressed, 
         };
     }, []); // Empty dependency array ensures effect runs only once
 
+    useEffect(() => {
+      if (areSiblingsIntersecting.top) {
+        topPressed(ind)
+      } else if (areSiblingsIntersecting.left) {
+        leftPressed(ind)
+      } else if (areSiblingsIntersecting.right) {
+        rightPressed(ind)
+      } else if (areSiblingsIntersecting.bottom) {
+        downPressed(ind)
+      } 
+    }, [areSiblingsIntersecting])
+
     return (
         <div className='game-container'>
             <div className="control">
@@ -78,9 +90,7 @@ function GameControl({coordinates, setCoordinates, intervalId, ind, topPressed, 
                     rightPressed={rightPressed} 
                 />
             </div>
-            {/* {areSiblingsIntersecting  ? alert("I was true") : null} */}
-            <div className="insersect">areSiblingsIntersecting : {console.log(areSiblingsIntersecting)}</div>
-            <div className="dot" style={coordinates[0]} ref={dotRef}></div>  
+            <div className="dot" style={coordinates[ind-1]} ref={dotRef}></div>  
         </div>)
 }
 

@@ -8,10 +8,10 @@ export default function Game({coordinates, setCoordinates, intervalId}) {
     useEffect(() => {
       const checkOverlap = () => {
         if (
-          parseInt(coordinates[1].top) > parseInt(goal.top) &&
-          (parseInt(coordinates[1].top) + 25) < (parseInt(goal.top) + 150) &&
-          parseInt(coordinates[1].left) > parseInt(goal.left) &&
-          (parseInt(coordinates[1].left) + 25) < (parseInt(goal.left) + 150)
+          parseInt(coordinates[coordinates.length - 1].top) > parseInt(goal.top) &&
+          (parseInt(coordinates[coordinates.length - 1].top) + 25) < (parseInt(goal.top) + 150) &&
+          parseInt(coordinates[coordinates.length - 1].left) > parseInt(goal.left) &&
+          (parseInt(coordinates[coordinates.length - 1].left) + 25) < (parseInt(goal.left) + 150)
         ) {
           setOverlapDetected(true);
         } else {
@@ -36,14 +36,13 @@ export default function Game({coordinates, setCoordinates, intervalId}) {
 
     useEffect(() => {
         let left = Math.floor(Math.random()*541) + 'px';
-        let top = parseInt(left) < 26 ? Math.floor(175 + Math.random()*241) + 'px' : Math.floor(Math.random()*241) + 'px';
+        let top = parseInt(left) < 26 ? Math.floor(26 + Math.random()*241) + 'px' : Math.floor(Math.random()*241) + 'px';
         setGoal({position: 'relative', left, top})
     }, [])
 
-    // console.log(coordinates)
     return (
     <div className='game-container'>
         <div className="goal-container" style={goal}></div>
-        <div className="dot" style={coordinates[1]}></div>
+        <div className="dot" style={coordinates[coordinates.length - 1]}></div>
     </div>)
 }
