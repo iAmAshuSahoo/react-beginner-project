@@ -29,7 +29,9 @@ export default function Game({coordinates, setCoordinates, intervalId}) {
         let tempCoordinate = [...coordinates];
         tempCoordinate[1] = {position: 'absolute', top:"0px", left:"0px"}
         setCoordinates(tempCoordinate)
-        clearInterval(intervalId);
+        intervalId.forEach(element => {
+          clearInterval(element);
+        });
         alert('Success!!!🎉🤩🌟You hit the goal');
       }
     }, [overlapDetected]); // Trigger alert when overlapDetected changes
