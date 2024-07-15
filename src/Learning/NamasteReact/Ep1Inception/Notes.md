@@ -7,7 +7,7 @@ It knows document, createElement, appendChild. But it donot know React
 For this we add React.
 1. For this we can use CDN links - Links where the code is hoisted.
 
-CDN is Content Delivery Network
+CDN is Content Delivery Network - where react/any library is hoisted.
 
 Problem Solving - when someone is making a purchase and they are sitting at a geologically different place. It leads them to face delay due to time taken by packets and bad user experience. Here CDN helps. Cloudflare is a company. CDN helps in hoisting huge content near customer.
 
@@ -35,6 +35,8 @@ We use the createElement, createRoot
 It takes in 3 parameter element, attribute in the form of objects and props. Then createElement returns object.
 
 If we code like this things become hard for us, so we use JSX.
+
+ReactElemet is a Object. This becomes HTML that browser understands.
 
 Assignment
 1. Emmet - set of plug ins for text editors that allows for high speed coding and editing in html
